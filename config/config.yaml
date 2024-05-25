@@ -3,18 +3,10 @@ output:
   file_path: ./Scan-Results.csv
   format: CSV
 working_dir: .
-language: EN
-apk:
-  include:
-    - glob(**/*.apk)
+strict: true
+language: ES
 sast:
   include:
     - .
-  exclude:
-    - glob(**/node_modules/**)
-    - glob(**/test/**)
 sca:
   include:
-    - .
-  exclude:
-    - glob(**/test/**)
